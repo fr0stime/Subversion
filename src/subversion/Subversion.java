@@ -19,7 +19,7 @@ public class Subversion {
     public static void main(String[] args) {
        
         Scanner input = new Scanner (System.in);
-        int[] num = new int[5];
+        int[] num = new int[10];
         
         for (int i = 0; i < num.length; i++){
             System.out.println("Introdueix un valor");
@@ -28,15 +28,18 @@ public class Subversion {
            
         }
         int check = num[0];
+        int check2 = num[0];
+        
         for (int i = 0; i < num.length; i++){
             if (num[i]< check){
                 check=num[i];
-                
-            }else {
-                System.out.println("Seguent valor");
+            }
+            if (num[i] > check2) {
+                check2=num[i];
             }
         }
-        System.out.println("Valor de check " +check);
+        System.out.print (" El valor mes petit: " + check );
+        System.out.print (" El valor mes gran:" + check2 );
     }
     }
 
